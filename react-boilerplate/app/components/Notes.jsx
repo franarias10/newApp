@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
-
-
-
+import Note from './Note';
 
 class Notes extends Component{
 
   render(){
     return(
     <ul>{this.props.notes.map(note=>
-      <li Key={note.id}>{note.task}</li>
+      <Note id={note.id} task={note.task} onDelete={this.props.onDelete}/>
       )}
     </ul>
     );
