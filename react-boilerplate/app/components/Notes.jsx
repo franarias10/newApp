@@ -5,8 +5,8 @@ class Notes extends Component{
 
   render(){
     return(
-    <ul>{this.props.notes.map(note=>
-      <Note id={note.id} task={note.task} onDelete={this.props.onDelete} editing={note.editing} clickNote={this.props.clickNote}/>
+    <ul className="notes">{this.props.notes.map(note=>
+      <Note   checkEnter={this.props.checkEnter} editNote={this.props.editNote} id={note.id} task={note.task} onDelete={this.props.onDelete} editing={note.editing} clickNote={this.props.clickNote}/>
       )}
     </ul>
     );
